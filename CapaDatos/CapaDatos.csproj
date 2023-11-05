@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{139F2249-DEF5-43F1-B03E-95521ECBA9C8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CapaDatos</RootNamespace>
+    <AssemblyName>CapaDatos</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CD_Categoria.cs" />
+    <Compile Include="CD_Cliente.cs" />
+    <Compile Include="CD_Negocio.cs" />
+    <Compile Include="CD_Permiso.cs" />
+    <Compile Include="CD_Producto.cs" />
+    <Compile Include="CD_Proveedor.cs" />
+    <Compile Include="CD_Rol.cs" />
+    <Compile Include="CD_Usuario.cs" />
+    <Compile Include="Conexion.cs" />
+    <Compile Include="DBSISTEMA_VENTADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBSISTEMA_VENTADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBSISTEMA_VENTADataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBSISTEMA_VENTADataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBSISTEMA_VENTADataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBSISTEMA_VENTADataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBSISTEMA_VENTADataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBSISTEMA_VENTADataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBSISTEMA_VENTADataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBSISTEMA_VENTADataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">
+      <Project>{fbf51efe-9c3b-44be-af15-a5a744f2bbdc}</Project>
+      <Name>CapaEntidad</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DBSISTEMA_VENTADataSet.xsc">
+      <DependentUpon>DBSISTEMA_VENTADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBSISTEMA_VENTADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBSISTEMA_VENTADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBSISTEMA_VENTADataSet.xss">
+      <DependentUpon>DBSISTEMA_VENTADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBSISTEMA_VENTADataSet1.xsc">
+      <DependentUpon>DBSISTEMA_VENTADataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DBSISTEMA_VENTADataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBSISTEMA_VENTADataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBSISTEMA_VENTADataSet1.xss">
+      <DependentUpon>DBSISTEMA_VENTADataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DBSISTEMA_VENTADataSet2.xsc">
+      <DependentUpon>DBSISTEMA_VENTADataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DBSISTEMA_VENTADataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBSISTEMA_VENTADataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBSISTEMA_VENTADataSet2.xss">
+      <DependentUpon>DBSISTEMA_VENTADataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DBSISTEMA_VENTADataSet3.xsc">
+      <DependentUpon>DBSISTEMA_VENTADataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DBSISTEMA_VENTADataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBSISTEMA_VENTADataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBSISTEMA_VENTADataSet3.xss">
+      <DependentUpon>DBSISTEMA_VENTADataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DBSISTEMA_VENTADataSet4.xsc">
+      <DependentUpon>DBSISTEMA_VENTADataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DBSISTEMA_VENTADataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBSISTEMA_VENTADataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBSISTEMA_VENTADataSet4.xss">
+      <DependentUpon>DBSISTEMA_VENTADataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
